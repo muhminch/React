@@ -68,7 +68,7 @@ function App() {
               defaultChecked={numberAllowed}
               name=""
               id=""
-              onChange={() => { setNumberAllowed((prev) => { !prev }) }}
+              onChange={() => { setNumberAllowed((prev) =>  !prev ) }}
             />
             <label htmlFor="number">Numbers</label>
           </div>
@@ -78,7 +78,7 @@ function App() {
               defaultChecked={charAllowed}
               name=""
               id=""
-              onChange={() => { setCharAllowed((prev) => { !prev }) }}
+              onChange={() => { setCharAllowed((prev) =>  !prev ) }}
             />
             <label htmlFor="charInput">Character</label>
           </div>
