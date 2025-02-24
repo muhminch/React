@@ -14,6 +14,14 @@ function App() {
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
+  const onAmountChange = (amount) => {
+    setAmount(amount);
+  }
+
+  const onCurrencyChange = (currency) => {
+    setFrom(currency);
+  }
+
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to]);
   }
@@ -37,8 +45,8 @@ function App() {
               label="from" 
               amount={amount}
               currencyOptions = {options}
-              onAmountChange={(amount) => setAmount(amount) }
-              onCurrecyChange = {(cuurency) => setFrom(cuurency) }
+              onAmountChange={onAmountChange(amount) }
+              onCurrecyChange = {onCurrencyChange(currency) }
               selectedCurrency={from}
               >
               </InputBox>

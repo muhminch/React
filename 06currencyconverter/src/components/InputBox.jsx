@@ -1,16 +1,18 @@
 import React, { useId } from "react";
 
-function InputBox({
-  label,
-  amount,
-  onAmountChange,
-  onCurrecyChange,
-  currencyOptions = [],
-  selectedCurrency = "usd",
-  amountDisabled = false,
-  currencyDisabled = false,
-  className = "",
-}) {
+function InputBox(
+      {
+      label,
+      amount,
+      onAmountChange,
+      onCurrecyChange,
+      currencyOptions = [],
+      selectedCurrency = "usd",
+      amountDisabled = false,
+      currencyDisabled = false,
+      className = "",
+    }
+  ) {
   const id = useId();
   return (
     <>
