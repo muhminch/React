@@ -20,10 +20,10 @@ function TodoItem({ todo }) {
     const buttonOnClick = () => {
         if (todo.completed) return;
         if (isEditable) {
-            updateTodo(todo.id,{...todo, todo: todoMsg})
+            updateTodo(todo.id, { ...todo, todo: todoMsg })
             setIsEditable(false)
         }
-        else{
+        else {
             setIsEditable((prev) => !prev)
         }
     }
