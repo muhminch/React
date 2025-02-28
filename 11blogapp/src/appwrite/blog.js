@@ -87,6 +87,15 @@ export class Service {
             return false;
         }
     }
+
+    async getPreviewFile(fileId){
+        try {
+            return await this.bucket.getFilePreview(conf.appWriteBucketId,fileId).href
+        } catch (error) {
+            return false
+        }
+
+    }
 }
 
 const blogService = new Service();
