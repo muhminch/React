@@ -15,6 +15,7 @@ import Contact from "./components/Contact/contact.jsx";
 import User from "./components/User/user.jsx";
 import Github from "./components/Github/Github.jsx";
 import { getGitHubInfo } from "./components/Github/Github.jsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
