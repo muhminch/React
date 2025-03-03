@@ -7,3 +7,7 @@
 # git branch -M main
 # git remote add origin https://github.com/muhminch/React.git
 # git push -u origin main
+
+
+# npm config set legacy-peer-deps true
+# npm install
