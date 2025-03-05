@@ -26,7 +26,7 @@ function PostForm({ post }) {
 
     const submit = async (data) => {
         if (post) {
-            const file = data.img[0] ? await storageService.uploadFile(data.img[0]) : null
+            const file = data.image[0] ? await storageService.uploadFile(data.image[0]) : null
             if (file) {
                 await storageService.deleteFile(post.featuredImage)
             }
@@ -38,7 +38,7 @@ function PostForm({ post }) {
             }
         }
         else{
-            const file = await storageService.uploadFile(data.img[0]) 
+            const file = await storageService.uploadFile(data.image[0]) 
             if(file){
                 const fileId = file.$id
                 data.featuredImage = fileId
@@ -51,7 +51,7 @@ function PostForm({ post }) {
     }
 
     const slugTransform = useCallback((value) => {
-        if (value && typeof value === string) {
+        if (value && typeof value === "string") {
             return value.trim().toLowerCase().replace(/[^a-zA-Z\d\s]+/g, '-')
                 .replace(/\s/g, '-')
         }
@@ -73,14 +73,14 @@ function PostForm({ post }) {
             <div className="w-2/3 px-2">
                 <Input
                     label="Title"
-                    placeHolder="Title"
+                    placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
                 />
 
                 <Input
                     label="Slug :"
-                    placeHolder="Slug"
+                    placeholder="Slug"
                     className="mb-4"
                     {...register("slug", { required: true })}
                     onInput={(e) => {
@@ -103,7 +103,7 @@ function PostForm({ post }) {
                     type="File"
                     className="mb-4"
                     accept="image/png, image/jpg, image/jpeg"
-                    {...register("image"), { required: !post }}
+                    {...register("image", { required: !post })}
                 />
 
                 {
@@ -120,7 +120,7 @@ function PostForm({ post }) {
                     label="Status"
                     className="mb-4"
                     options={["Active", "Inactive"]}
-                    {...register("status"), { required: true }}
+                    {...register("status", { required: true })}
                 />
 
                 <Button

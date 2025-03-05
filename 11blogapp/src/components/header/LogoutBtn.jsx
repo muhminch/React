@@ -18,8 +18,8 @@ function LogoutBtn() {
             onClick={logoutHandler}
         >
             Logout
-        </button> >
-  )
+        </button> 
+     )
 }
 
 export default LogoutBtn

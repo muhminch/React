@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { blogService } from '../appwrite/blog.js'
+import blogService  from '../appwrite/blog.js'
 
 function PostCard({
     $id,

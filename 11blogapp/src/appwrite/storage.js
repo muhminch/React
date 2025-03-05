@@ -1,11 +1,11 @@
 import { Client, Storage, ID } from "appwrite";
 import conf from "../conf/conf";
 
-export class Storage{
+export class Service{
     client= new Client();
     bucket;
 
-    Storage(){
+    constructor(){
         this.client
             .setEndpoint(conf.appWriteURL) // Your API Endpoint
             .setProject(conf.appWriteProjectId); // Your project ID    
@@ -18,7 +18,7 @@ export class Storage{
             
             return await this.bucket.createFile(
                 conf.appWriteBucketId,
-                ID.unique,
+                ID.unique(),
                 file
             )
 
@@ -53,5 +53,5 @@ export class Storage{
 
 }
 
-const storageService = new Storage();
+const storageService = new Service();
 export default storageService;

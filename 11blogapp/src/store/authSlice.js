@@ -10,12 +10,12 @@ const initialState = {
     reducers: {
         login: (state, action) => {
             state.status = true;
-            state.userdata = action.payload.userdata;
+            state.userData = action.payload.userData;
 
         },
         logout: (state) => {
             state.status = false;
-            state.userdata = null;
+            state.userData = null;
         }
     }
 

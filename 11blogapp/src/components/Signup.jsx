@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Form, useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import authService from '../appwrite/auth'
 import { login } from '../store/authSlice'
 import Logo from './Logo'
@@ -65,14 +65,14 @@ function Signup() {
 
                         <Input
                             label="Email :"
-                            placeHolder="Email"
+                            placeholder="Email"
                             type="email"
                             {...register("email", { required: true })}
                         />
 
                         <Input
                             label="Password :"
-                            placeHolder="Password"
+                            placeholder="Password"
                             type="password"
                             {...register("password", { required: true })}
                         />

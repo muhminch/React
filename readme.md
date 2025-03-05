@@ -10,6 +10,9 @@
 
 # npm create vite@latest
 # npm install tailwindcss @tailwindcss/vite
+# import tailwindcss from '@tailwindcss/vite' and tailwindcss() in vite.config.ts
+# @import "tailwindcss"; in index.css
+
 
 # Install Tiny MCE Editor Pluggin
 # npm config set legacy-peer-deps true
