@@ -8,7 +8,7 @@ function Posts() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    blogService.getPosts()
+    blogService.getPosts([])
       .then((posts) => {
         if (posts) {
           setPosts(posts.documents)
